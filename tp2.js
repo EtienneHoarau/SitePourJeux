@@ -1,4 +1,4 @@
-var listemots= new Array("interstellar","joker","batman","pulp fiction","sonic","the exorcist","shrek","scream","ghostBuster","avatar","alerte rouge","the mask","le roi lion","halloween","maman j ai rate l avion")
+var listemots= new Array("interstellar","joker","batman","pulp fiction","sonic","the exorcist","shrek","scream","ghostbuster","avatar","alerte rouge","the mask","le roi lion","halloween","maman j ai rate l avion")
 var motactuel;
 var motDeviner= new Array();
 var vie;
