@@ -7,7 +7,7 @@ var lettreUtiliser;
 function afficher() {
     temp ="";
     for (let i = 0; i < motDeviner.length; i++) {
-        temp=temp+motDeviner[i]+" ";        
+        temp=temp+motDeviner[i]+" ";     
     }
     document.getElementById("motADeviner").innerHTML=temp;
 }
@@ -24,7 +24,7 @@ function onload() {
         else if (motactuel[j]=="'"||motactuel[j]=="-") {
             motDeviner[j]==motactuel[j];
         }
-        else{motDeviner[j]=".";}
+        else{motDeviner[j]=" ";}
     }
     afficher();
 }
@@ -32,13 +32,15 @@ function onload() {
 
 
 function validation() {
-    valeur= document.getElementById("lettreEntree").value;
+    valeur= document.getElementById("lettreEntree").value.toLowerCase();
     if (valeur.length!=1) {
        alert("Valeur impossible!!!");
-       return;
     }
-    if (motactuel.includes(valeur)) {
+    else if (lettreUtiliser.includes(valeur)) {
+        alert("Lettre déjà utilisée !!!");}
+    else if (motactuel.includes(valeur)) {
         //alert("Lettre valide");
+        
         for (let j = 0; j < motactuel.length; j++) {
             if (valeur==motactuel[j]) {
                 motDeviner[j]=valeur;
@@ -47,6 +49,8 @@ function validation() {
         //alert(motDeviner);
         afficher();
         victoire(motDeviner);
+    
+    
     }
     else{
         vie--;
@@ -70,6 +74,6 @@ function victoire(mot) {
 }
 function defaite() {
     if (vie<=0) {
-        alert("Perdu!! (Pour relancer recharge la page)");
+        alert("Perdu!! Le mot était "+motactuel+" (Pour relancer recharge la page)");
     }
 }
