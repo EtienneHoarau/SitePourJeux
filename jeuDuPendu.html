@@ -25,10 +25,13 @@
             <img src="styles/perdu/0.png" id="imgVie">
         </div>
     </fieldset>
-    <fieldset>
+    <fieldset id="ZoneEntree">
         <legend> Zone d'entrée </legend>
         <label for="Entree">Entrée une lettre : </label><input type="text" id="lettreEntree" onkeypress="if(event.key=='Enter'){validation()}"><br>
         <button id="ValiderLettre" onclick="validation()">Valider</button>
     </fieldset>
+    <div>
+        <img src="styles/gifVictoire.gif" alt="" id="gifVictoire" hidden="true">
+    </div>
 </body>
 </html>

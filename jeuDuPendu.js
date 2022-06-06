@@ -34,6 +34,13 @@ function onload() {
 function validation() {
     valeur= document.getElementById("lettreEntree").value.toLowerCase();
     if (valeur.length!=1) {
+        if (valeur==motactuel) {
+            for (let j = 0; j < motactuel.length; j++) {
+                motDeviner[j] = motactuel[j];
+            }
+            afficher();
+            victoire(motDeviner);
+        }
        alert("Valeur impossible!!!");
     }
     else if (lettreUtiliser.includes(valeur)) {
@@ -70,6 +77,8 @@ function victoire(mot) {
             return
         }
     }
+    document.getElementById("ZoneEntree").hidden=true;
+    document.getElementById("gifVictoire").hidden=false;
     alert("Mot Trouvé!! (Pour relancer recharge la page)");
 }
 function defaite() {
