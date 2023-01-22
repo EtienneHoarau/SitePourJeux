@@ -13,10 +13,10 @@
         <h1>JEU DU PENDU SPECIAL FILM</h1>
     </header>
     <fieldset id="zoneDeJeu">
+        <legend>
+            Zone de Jeu
+        </legend>
         <div id="test">
-            <legend>
-                Zone de Jeu
-            </legend>
             <pre  id="motADeviner"></pre>
             <p>lettre utilisée:</p>
             <p id="lettreUtilisee"></p>
@@ -27,7 +27,8 @@
     </fieldset>
     <fieldset id="ZoneEntree">
         <legend> Zone d'entrée </legend>
-        <label for="Entree">Entrée une lettre : </label><input type="text" id="lettreEntree" onkeypress="if(event.key=='Enter'){validation()}"><br>
+        <label for="Entree">Entrée une lettre : </label>
+        <input type="text" id="lettreEntree" onkeypress="if(event.key=='Enter'){validation()}"><br>
         <button id="ValiderLettre" onclick="validation()">Valider</button>
     </fieldset>
     <div>

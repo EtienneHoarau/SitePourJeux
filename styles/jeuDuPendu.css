@@ -17,3 +17,10 @@ pre{
     white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
+
+
+.caca{
+    display: inline;
+    width: 45%;
+    background-color: rebeccapurple;
+}

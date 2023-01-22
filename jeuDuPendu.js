@@ -51,7 +51,7 @@ function validation() {
         for (let j = 0; j < motactuel.length; j++) {
             if (valeur==motactuel[j]) {
                 motDeviner[j]=valeur;
-                }
+            }
         }
         //alert(motDeviner);
         afficher();
